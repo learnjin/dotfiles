@@ -1,0 +1,20 @@
+## LIST FILES ##
+alias ls='ls -ap'
+alias ll='ls -l'
+
+## AWK ##
+alias awk1="awk '{print \$1}'"
+alias awk2="awk '{print \$2}'"
+alias awk3="awk '{print \$3}'"
+alias awklast="rev | awk1 | rev"
+
+## EDITOR ##
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+alias vimod="nvim \`git st | grep -v '??' | rev | awk1 | rev\`"
+alias vidiff="nvim \`git diff --name-status master | rev | awk1 | rev\`"
+
+## RUBY ##
+alias b=bundle
+alias be="bundle exec"

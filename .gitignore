@@ -1,0 +1,5 @@
+airbnb/
+private/
+
+neovim/.config/nvim/.netrwhist
+neovim/.config/nvim/spell

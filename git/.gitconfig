@@ -1,0 +1,29 @@
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+  precomposeunicode = true
+  sparseCheckout = true
+[color]
+   ui = true
+[push]
+  default = current
+[rerere]
+  enabled = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status -s
+  br = !git --no-pager branch
+  d = !git diff --name-status $(git merge-base --fork-point
+  dd = !git diff $(git merge-base --fork-point master)..HEAD
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  tip = rev-parse HEAD
+  l = log HEAD --not master --no-merges
+
+[include]
+  path = .gitconfig_me
+[includeIf "gitdir/i:~/airlab/"]
+  path = ~/.gitconfig_air
+[includeIf "gitdir/i:~/ht/"]
+  path = ~/.gitconfig_air
+
